@@ -15,6 +15,8 @@ const Navbar: React.FC = () => {
       elevation={2}
       sx={{
         background: 'linear-gradient(45deg, #1976d2 30%, #42a5f5 90%)',
+        width: '100%',
+        margin: 0,
       }}
     >
       <Toolbar sx={{ px: { xs: 2, sm: 3 } }}>

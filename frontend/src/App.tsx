@@ -58,9 +58,21 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          minHeight: '100vh',
+          width: '100%',
+          margin: 0,
+          padding: 0
+        }}>
           <Navbar />
-          <Box component="main" sx={{ flexGrow: 1 }}>
+          <Box component="main" sx={{ 
+            flexGrow: 1,
+            width: '100%',
+            padding: 0,
+            margin: 0
+          }}>
             <Routes>
               <Route path="/" element={<LocationList />} />
               <Route path="/locations" element={<LocationList />} />

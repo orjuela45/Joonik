@@ -133,7 +133,12 @@ const LocationList: React.FC = () => {
   const isEmptyWithoutFilters = isEmpty && !hasActiveFilters;
 
   return (
-    <Box sx={{ p: 3 }}>
+    <Box sx={{ 
+      width: '100%',
+      minHeight: '100vh',
+      p: { xs: 2, sm: 3 },
+      margin: 0
+    }}>
       {/* Header */}
       <Box sx={{ mb: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 600 }}>
