@@ -82,9 +82,18 @@ joonik/
 - `DELETE /api/v1/locations/{id}` - Eliminar ubicación
 
 ### Health Check
-- `GET /api/v1/health` - Estado del servicio
+- `GET /api/v1/health` - Estado del servicio (sin API key requerida)
 
-**API Key requerida**: `joonik-secret-api-key-2024`
+**Campos de Location:**
+- `id` (integer, auto-increment)
+- `code` (string, único, máx 50 caracteres)
+- `name` (string, máx 255 caracteres)
+- `image` (string, nullable, máx 500 caracteres)
+- `created_at` (timestamp)
+- `updated_at` (timestamp)
+
+**API Key requerida**: Configurada en variable de entorno `API_KEY` (default: `joonik-secret-api-key-2024`)
+**Header requerido**: `X-API-Key: {tu-api-key}`
 
 ## 🔧 Comandos de Desarrollo
 

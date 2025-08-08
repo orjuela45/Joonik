@@ -18,9 +18,22 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - README.md con documentación completa para desarrollo nativo
 - CHANGELOG.md siguiendo convenciones estándar
 
+#### Backend (Laravel 11) - Implementado
+- Modelo Location con campos: id, code, name, image, created_at, updated_at
+- Migración para tabla locations con índice único en campo code
+- LocationController con CRUD completo (index, store, show, update, destroy)
+- LocationRequest para validaciones centralizadas
+- ApiKeyMiddleware para autenticación por API key desde variables de entorno
+- Rutas API protegidas con middleware de autenticación
+- Seeder con 10 ubicaciones de ejemplo
+- Configuración de API key en variables de entorno (.env)
+- Eliminación de migraciones innecesarias (users, cache, jobs, personal_access_tokens)
+
 ### Changed
 - Enfoque de desarrollo de Docker a nativo
 - Scripts optimizados para Windows PowerShell/CMD
+- Validaciones movidas de controller a FormRequest para mejor organización
+- Middleware de API key optimizado para usar variables de entorno directamente
 
 ## [1.0.0] - 2024-01-15
 
