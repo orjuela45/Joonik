@@ -18,6 +18,17 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - README.md con documentación completa para desarrollo nativo
 - CHANGELOG.md siguiendo convenciones estándar
 
+#### Frontend Testing Suite
+- Configuración completa de Jest con TypeScript
+- React Testing Library para tests de componentes
+- Tests unitarios para todos los componentes (LocationCard, LocationForm, LocationList, Navbar)
+- Tests de integración para LocationsPage
+- Tests para custom hook useLocations
+- Configuración de cobertura de código con umbral del 80%
+- Scripts de testing: test, test:watch, test:coverage, test:ci
+- Setup de mocks para Material-UI, window.matchMedia, IntersectionObserver
+- Reportes de cobertura en HTML y texto
+
 #### Backend (Laravel 11) - Implementado
 - Modelo Location con campos: id, code, name, image, created_at, updated_at
 - Migración para tabla locations con índice único en campo code
@@ -34,6 +45,15 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - Scripts optimizados para Windows PowerShell/CMD
 - Validaciones movidas de controller a FormRequest para mejor organización
 - Middleware de API key optimizado para usar variables de entorno directamente
+- Puerto del frontend actualizado de 3000 a 5173 (Vite)
+- Comandos de npm actualizados para usar Vite en lugar de Create React App
+
+### Fixed
+- Corrección de tests fallidos en LocationForm (validaciones de esquema)
+- Corrección de tests fallidos en LocationCard (selectores de elementos)
+- Ajuste de mensajes de error en validaciones para coincidir con locationSchema
+- Corrección de tipos TypeScript en interface Location
+- Resolución de problemas con disabled buttons en tests de formularios
 
 ## [1.0.0] - 2024-01-15
 

@@ -56,7 +56,7 @@ echo    Backend:  scripts\start-backend.bat
 echo    Frontend: scripts\start-frontend.bat
 echo.
 echo 📚 URLs disponibles:
-echo    Frontend: http://localhost:3000
+echo    Frontend: http://localhost:5173
 echo    Backend:  http://localhost:8000
 echo    API:      http://localhost:8000/api/v1
 echo.

@@ -52,7 +52,7 @@ joonik/
    ```
 
 4. **Acceder a la aplicación**
-   - Frontend: http://localhost:3000
+   - Frontend: http://localhost:5173
    - Backend API: http://localhost:8000
 
 ## 🛠️ Servicios Disponibles
@@ -64,7 +64,7 @@ joonik/
 - **Cache**: File-based
 
 ### Frontend (React + TypeScript)
-- **Puerto**: 3000
+- **Puerto**: 5173
 - **UI Framework**: Material-UI
 - **HTTP Client**: Axios
 - **Forms**: React Hook Form + Zod
@@ -130,17 +130,22 @@ cd frontend
 npm install
 
 # Iniciar desarrollo
-npm start
+npm run dev
 
 # Build para producción
 npm run build
 
 # Tests
-npm test
+npm test                    # Ejecutar tests una vez
+npm run test:watch          # Ejecutar tests en modo watch
+npm run test:coverage       # Ejecutar tests con reporte de cobertura
+npm run test:ci             # Ejecutar tests para CI/CD
 
-# Linting
-npm run lint
-npm run lint:fix
+# Linting y formateo
+npm run lint                # ESLint
+npm run lint:fix            # ESLint con auto-fix
+npm run format              # Prettier
+npm run format:check        # Verificar formato
 ```
 
 ## 📊 Logging
@@ -153,14 +158,27 @@ npm run lint:fix
 ### Backend
 ```bash
 cd backend
-php artisan test
+php artisan test                # Ejecutar todos los tests
+php artisan test --coverage     # Tests con cobertura
+php artisan test --filter=LocationTest  # Tests específicos
 ```
 
 ### Frontend
 ```bash
 cd frontend
-npm test
+npm test                        # Ejecutar tests una vez
+npm run test:watch              # Modo watch para desarrollo
+npm run test:coverage           # Tests con reporte de cobertura
+npm run test:ci                 # Tests para CI/CD (sin watch)
 ```
+
+#### Cobertura de Tests Frontend
+- **Componentes**: LocationCard, LocationForm, LocationList, Navbar
+- **Páginas**: LocationsPage (tests de integración)
+- **Hooks**: useLocations (custom hook)
+- **Configuración**: Jest + React Testing Library + TypeScript
+- **Umbral de cobertura**: 80% (branches, functions, lines, statements)
+- **Reportes**: HTML y texto en `frontend/coverage/`
 
 ## 📝 Linting y Formateo
 

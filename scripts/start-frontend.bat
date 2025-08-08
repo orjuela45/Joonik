@@ -20,7 +20,7 @@ if not exist "node_modules" (
 )
 
 echo ✅ Frontend configurado correctamente
-echo 🌐 Iniciando servidor en http://localhost:3000
+echo 🌐 Iniciando servidor en http://localhost:5173
 echo.
 echo 📋 Características del proyecto:
 echo    ✓ React con TypeScript
@@ -35,4 +35,4 @@ echo ⚠️  Presiona Ctrl+C para detener el servidor
 echo.
 
 REM Iniciar el servidor de desarrollo
-npm start
+npm run dev
