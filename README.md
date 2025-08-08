@@ -8,11 +8,22 @@ Aplicación full-stack desarrollada con Laravel (backend) y React + TypeScript (
 joonik/
 ├── backend/          # API Laravel
 ├── frontend/         # Aplicación React + TypeScript
-├── scripts/          # Scripts de automatización
+├── scripts/          # Scripts de automatización (PowerShell)
 ├── docs/            # Documentación
 ├── CHANGELOG.md     # Registro de cambios
 └── README.md        # Este archivo
 ```
+
+## 🔧 Scripts de Automatización
+
+El proyecto incluye scripts de PowerShell para facilitar el desarrollo:
+
+- **`setup.ps1`**: Instala todas las dependencias del backend y frontend
+- **`start-backend.ps1`**: Inicia el servidor Laravel en el puerto 8000
+- **`start-frontend.ps1`**: Inicia el servidor de desarrollo React en el puerto 5173
+- **`start-all.ps1`**: Inicia ambos servicios simultáneamente en ventanas separadas
+
+**Nota**: Los scripts requieren PowerShell y verifican automáticamente las dependencias antes de ejecutarse.
 
 ## 🚀 Quick Setup
 
@@ -31,24 +42,24 @@ joonik/
    ```
 
 2. **Instalar dependencias**
-   ```bash
-   scripts\setup.bat
+   ```powershell
+   scripts\setup.ps1
    ```
 
 3. **Iniciar la aplicación**
    
    **Opción A: Iniciar ambos servicios**
-   ```bash
-   scripts\start-all.bat
+   ```powershell
+   scripts\start-all.ps1
    ```
    
    **Opción B: Iniciar individualmente**
-   ```bash
+   ```powershell
    # Terminal 1 - Backend
-   scripts\start-backend.bat
+   scripts\start-backend.ps1
    
    # Terminal 2 - Frontend
-   scripts\start-frontend.bat
+   scripts\start-frontend.ps1
    ```
 
 4. **Acceder a la aplicación**
